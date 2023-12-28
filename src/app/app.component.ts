@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-16';
+
+  onClick() {
+    console.log('ON_CLICK');
+  }
 }
