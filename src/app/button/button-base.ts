@@ -18,7 +18,7 @@ const HOST_SELECTOR_ISP_CLASS_PAIR: { attribute: string; ispClasses: string[] }[
 
 @Directive()
 export class IspButtonBase {
-  /** Theme color palette of the button */
+  @Input() size: 'small' | 'medium' | 'large' = 'medium';
   @Input() color?: 'primary' | 'accent' | 'success' | 'error' | 'warn' | null;
 
   constructor(private elementRef: ElementRef) {

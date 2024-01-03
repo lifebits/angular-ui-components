@@ -7,7 +7,9 @@ import { IspButtonBase } from './button-base';
   templateUrl: 'button.html',
   styleUrls: ['button.scss'],
   host: {
-    '[class]': 'color ? "isp-" + color : ""',
+    '[class]': 'color ? "isp-" + color : "isp-primary"',
+    '[class.isp-button--small]': 'size === "small"',
+    '[class.isp-button--large]': 'size === "large"'
   },
   exportAs: 'ispButton',
   encapsulation: ViewEncapsulation.None,

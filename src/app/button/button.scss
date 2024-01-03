@@ -27,6 +27,14 @@
     color: var(--isp-text-disabled, #979797) !important;
   }
 
+  &--small {
+    height: 32px;
+  }
+
+  &--large {
+    height: 48px;
+  }
+
   /* isp-button--inline */
   &--inline {
     &.isp-primary {
