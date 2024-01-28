@@ -5,7 +5,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PageComponent } from './page/page.component';
 
-import { ButtonModule, IspButton } from './button';
+import { IspButton } from './button';
+import { OverlayModuleCustom } from './overlay/overlay.module';
+
+// import { PARENT_OR_NEW_INLINE_MENU_STACK_PROVIDER, PARENT_OR_NEW_MENU_STACK_PROVIDER } from '@angular/cdk/menu';
+import { PARENT_OR_NEW_INLINE_MENU_STACK_PROVIDER, PARENT_OR_NEW_MENU_STACK_PROVIDER } from './app.component';
 
 @NgModule({
   declarations: [
@@ -15,9 +19,10 @@ import { ButtonModule, IspButton } from './button';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    IspButton
+    IspButton,
+    OverlayModuleCustom,
   ],
-  providers: [],
+  providers: [PARENT_OR_NEW_INLINE_MENU_STACK_PROVIDER('vertical'),],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
